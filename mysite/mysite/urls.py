@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from news.views import *
 
 urlpatterns = [
+    path('', index, name='home'),
     path('admin/', admin.site.urls),
     path('news/', include('news.urls')),
     path('category/<int:category_id>', get_category, name='category'),
